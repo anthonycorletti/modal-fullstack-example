@@ -1,6 +1,6 @@
 # modal-fullstack-example
 
-Running a fullstack example app on [Modal](https://modal.com).
+Run a fullstack example app on [Modal](https://modal.com).
 
 ## Usage
 
@@ -14,7 +14,16 @@ git clone https://github.com/anthonycorletti/modal-fullstack-example.git
 
 Then, follow the [contributing guide](./CONTRIBUTING.md) to install the app.
 
-Once the app is installed, you can run it locally with
+Once the app is installed, you can run it locally –
+
+Install and build tailwindcss
+
+```sh
+./scripts/install-tailwind.sh
+./scripts/build-tailwind.sh
+```
+
+Then, run the app
 
 ```sh
 ./scripts/run-uvicorn.sh
