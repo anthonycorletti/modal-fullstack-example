@@ -36,6 +36,7 @@ jobs:
 
       - name: deploy to modal
         run: |
+          echo ${{ secrets.ENV }} | base64 -d > .env
           modal token set --token-id ${{ secrets.MODAL_TOKEN_ID }} --token-secret ${{ secrets.MODAL_TOKEN_SECRET }}
           ./scripts/modal-deploy.sh --name test-fullstack
-          rm ~/.modal.toml
+          rm ~/.modal.toml .env
